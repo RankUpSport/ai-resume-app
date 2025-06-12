@@ -5,12 +5,11 @@ async function generate() {
   document.getElementById("result").innerText = "생성 중... 잠시만 기다려주세요.";
 
   try {
-    const response = await fetch("/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ job, strengths })
-    });
-
+    const response = await fetch("https://ai-resume-backend-tj6g.onrender.com/generate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ job, strengths })
+        });
     const data = await response.json();
     document.getElementById("result").innerText = data.result || "자소서 생성에 실패했습니다.";
   } catch (error) {
