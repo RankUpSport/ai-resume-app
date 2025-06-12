@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI 자소서 생성기</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="nanum-gothic-normal.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>AI 자소서 생성기</h1>
+
+    <input id="job" placeholder="지원 직무를 입력하세요" />
+    <textarea id="strengths" placeholder="강점 또는 키워드를 입력하세요"></textarea>
+    
+    <button onclick="generate()">자소서 생성</button>
+    <button onclick="downloadPDF()">PDF 저장</button>
+
+    <h2>결과</h2>
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
